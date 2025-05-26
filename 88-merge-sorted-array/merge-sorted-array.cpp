@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // test2
+    // test
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         int m_idx = m - 1;
         int n_idx = n - 1;
