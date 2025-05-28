@@ -3,7 +3,7 @@ class Solution:
         letters_in_licensePlate= [s for s in licensePlate.lower() if s.isalpha()]
         res = []
         for word in words:
-            temp_licensePlate = copy.deepcopy(letters_in_licensePlate)
+            temp_licensePlate = letters_in_licensePlate[:]
             for letter in word:
                 if letter in temp_licensePlate:
                     temp_licensePlate.remove(letter)
