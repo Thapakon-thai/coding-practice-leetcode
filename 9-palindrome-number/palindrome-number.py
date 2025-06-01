@@ -14,3 +14,5 @@ class Solution:
         
         return x == revert_num or x == revert_num // 10
         
+        #x_str = str(x)
+        #return x_str == x_str[::-1]     
