@@ -13,10 +13,6 @@ public:
                 }
             }
         }
-
-        for(auto x : tmp) {
-            cout << x[0] << " " << x[1] << " " << x[2] << endl;
-        }
         return cnt;
     }
 };
