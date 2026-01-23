@@ -14,10 +14,7 @@ func isPalindrome(x int) bool {
         tempX /= 10
         level--
     }
-    fmt.Println(result == x)
-    fmt.Println(result)
 
-    //1 * 10^2 = 100 + 
     
     return result == x
 }
