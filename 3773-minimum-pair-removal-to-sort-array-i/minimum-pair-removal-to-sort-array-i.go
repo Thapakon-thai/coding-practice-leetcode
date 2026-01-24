@@ -1,11 +1,10 @@
 func minimumPairRemoval(nums []int) int {
     count := 0
     numsCopy := nums
-
     for len(numsCopy) > 1 {
         isIncreasing := true
-        minSum := 50001
         targetIndex := -1
+        minSum := 50001
         for i:=0; i<len(numsCopy)-1; i++ {
             if nums[i] > nums[i+1] {
                 isIncreasing = false
