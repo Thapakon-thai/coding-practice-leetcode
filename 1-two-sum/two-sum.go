@@ -1,14 +1,12 @@
 func twoSum(nums []int, target int) []int {
-    // สร้าง hash map target - curr: currIndex
-    hash := make(map[int]int)
-    for index, value := range nums {
-        i, exist := hash[value]
-        // fmt.Printf("%d: ", index)
-        // fmt.Println(hash)
+    check := make(map[int]int) // difference: index
+
+    for i, v := range nums {
+        checkedIndex, exist := check[v]
         if exist {
-            return []int{i, index}
+            return []int{checkedIndex, i}
         } else {
-            hash[target - value] = index
+            check[target - v] = i
         }
     }
     return []int{}
