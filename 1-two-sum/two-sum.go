@@ -1,13 +1,14 @@
 func twoSum(nums []int, target int) []int {
-    check := make(map[int]int) // difference: index
+    store := make(map[int]int)
 
-    for i, v := range nums {
-        checkedIndex, exist := check[v]
+    for i, x := range nums {
+        store_i, exist := store[x]
         if exist {
-            return []int{checkedIndex, i}
+            return []int{store_i, i}
         } else {
-            check[target - v] = i
+            store[target - x] = i
         }
     }
+
     return []int{}
 }
