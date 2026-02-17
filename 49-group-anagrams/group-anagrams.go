@@ -1,24 +1,17 @@
-import "strconv"
-
 func groupAnagrams(strs []string) [][]string {
-    group := make(map[string][]string)
+    group := make(map[[26]int][]string)
 
     for _, s := range strs {
-        count := make([]int, 26)
+        count := [26]int{}
 
         for _, c :=  range s {
             count[c - 'a']++
         }
 
-        key := strconv.Itoa(count[0])
-        for i:=1; i<26; i++ {
-            key += "," + strconv.Itoa(count[i])
-        }
-
-        group[key] = append(group[key], s)
+        group[count] = append(group[count], s)
     }
 
-    result := [][]string{}
+    result := make([][]string, 0, len(group))
     for _, value  := range group {
         result = append(result, value)
     }
